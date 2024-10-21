@@ -57,15 +57,23 @@ function verificar() {
     botaoLimpar.disabled = false // Habilita o botão limpar
     botaoVerificar.disabled = true // Desabilita o botao verificar
     fano.disabled = true // Desabilita a caixa de texto txtano
+
+    var masc = document.getElementById('masc') // Cria a varável masc e faz referência ao elemento input radio com id='masc'
+    var femi = document.getElementById('femi') // Cria a varável femi e faz referência ao elemento input radio com id='femi'
+
+    masc.disabled = true // Desabilita o elemento input radio com id='masc'
+    femi.disabled = true // Desabilita o elemento input radio com id='femi'
 }
 
 function limpar() {
 
-    /* As 3 variáveis abaixo (fano, res e fsex) foram recriadas dentro desta função, para funcionar corretamente com os métodos e atributos aplicados */
+    /* As 5 variáveis abaixo (fano, res, fsex, masc e femi) foram recriadas dentro desta função, para funcionar corretamente com os métodos e atributos aplicados */
 
     var fano = document.getElementById('txtano') // Cria a variável fano e faz a ligação ao elemento HTML input com id=txtano
     var res = document.getElementById('res') // Cria a variável res e faz a ligação ao elemento HTML div com id=res
     var fsex = document.getElementsByName('radsex') // Cria a variável fsex, e liga ela ao elemento HTML input do tipo radio, com opção masculino[0] ou feminino[1]
+    var masc = document.getElementById('masc') // Cria a varável masc e faz referência ao elemento input radio com id='masc'
+    var femi = document.getElementById('femi') // Cria a varável femi e faz referência ao elemento input radio com id='femi'
 
     fano.value = '' // Limpa o valor digitado na caixa de texto txtano - referente a variável fano
     res.innerHTML = '' // Limpa a resposta criada no parágrafo referente a variável res
@@ -74,4 +82,7 @@ function limpar() {
     botaoVerificar.disabled = false // Habilita o botão verificar
     fano.disabled = false // Habilita a caixa de texto txtano
     fano.focus() // Dá foco a caixa de texto
+
+    masc.disabled = false // Habilita o elemento input radio com id='masc'
+    femi.disabled = false // Habilita o elemento input radio com id='femi'
 }
