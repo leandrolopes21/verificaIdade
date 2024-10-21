@@ -75,4 +75,3 @@ function limpar() {
     fano.disabled = false // Habilita a caixa de texto txtano
     fano.focus() // Dá foco a caixa de texto
 }
-
