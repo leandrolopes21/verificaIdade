@@ -1,3 +1,8 @@
+var botaoVerificar = document.getElementById('bt1')
+var botaoLimpar = document.getElementById('bt2')
+
+botaoLimpar.disabled = true
+
 function verificar() {
 
     var data = new Date() // Cria a variável data que recebe o objeto new Date() [mostra a data atual do sistema]
