@@ -48,5 +48,26 @@ function verificar() {
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.` // Após alguma das condições ser atendida, a variável res mostra o texto com gênero e idade definidos
         res.appendChild(img) // Aqui a variável res mostrará a imagem escolhida na condição que será executada, o método appendChild cria temporáriamente o elemento img como filho dentro do elemento pai div com id='res'
     }
+
+    botaoLimpar.disabled = false // Habilita o botão limpar
+    botaoVerificar.disabled = true // Desabilita o botao verificar
+    fano.disabled = true // Desabilita a caixa de texto txtano
+}
+
+function limpar() {
+
+    /* As 3 variáveis abaixo (fano, res e fsex) foram recriadas dentro desta função, para funcionar corretamente com os métodos e atributos aplicados */
+
+    var fano = document.getElementById('txtano') // Cria a variável fano e faz a ligação ao elemento HTML input com id=txtano
+    var res = document.getElementById('res') // Cria a variável res e faz a ligação ao elemento HTML div com id=res
+    var fsex = document.getElementsByName('radsex') // Cria a variável fsex, e liga ela ao elemento HTML input do tipo radio, com opção masculino[0] ou feminino[1]
+
+    fano.value = '' // Limpa o valor digitado na caixa de texto txtano - referente a variável fano
+    res.innerHTML = '' // Limpa a resposta criada no parágrafo referente a variável res
+    fsex = document.getElementById('masc').checked = [0] // Marca novamente o seu valor inicial em 0
+    botaoLimpar.disabled = true // Desabilita o botão limpar
+    botaoVerificar.disabled = false // Habilita o botão verificar
+    fano.disabled = false // Habilita a caixa de texto txtano
+    fano.focus() // Dá foco a caixa de texto
 }
 
